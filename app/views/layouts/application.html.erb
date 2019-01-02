@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= favicon_link_tag asset_path('logo.png') %>
+    <title>jiffypix</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+
+    <!--NAV-->
+    <nav class="navbar navbar-light bg-light d-flex">
+      <div class="container">
+        <div class="logo">
+          <a class="navbar-brand" href="/">
+            <%= fa_stacked_icon "camera inverse", base: "square"%>
+               | hellogram
+          </a>
+        </div>
+
+          <!-- SEARCH FORM -->
+        <div class="m-auto">
+            <%= form_with url: search_path, method: :get, local: true, class: 'form-inline search-form' do |form| %>
+              <%= form.text_field :query, value: params[:query], class: 'form-control mr-sm-2', placeholder: '#search' %>
+            <% end %>
+        </div>
+
+        <div class="user-section">
+          <a><i class="fa fa-compass"></i></a>
+          <a><i class="fa fa-heart"></i></a>
+          <% if user_signed_in? %>
+            <a href="<%= destroy_user_session_path%>" data-method="delete">
+              <i class="fa fa-sign-in"></i>
+            </a>
+          <% else %>
+            <a href="<%= new_user_session_path%>">
+              <i class="fa fa-user"></i>
+            </a>
+          <% end %>
+        </div>
+      </div>
+    </nav>
+
+    <!--CONTENT-->
+    <main class="container" style="min-height: 500px;">
+      <%= yield %>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="container footer">
+      <nav class="navbar d-flex">
+        <ul>
+          <!-- <li>some links here
+          </li> -->
+
+        </ul>
+        <p> © 2019 Mariel Westervelt </p>
+      </nav>
+    </footer>
+  </body>
+</html>
