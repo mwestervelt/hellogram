@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'search' => 'search#index'
 
   root to: 'home#index'
-  resources :users, only: [:show, :edit, :update]
+  resources :users, only: [:show, :edit, :update, :destroy]
   resources :posts, only: [:new, :create, :show, :destroy]
 
 end

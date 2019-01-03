@@ -33,7 +33,7 @@
     </a>
     <a class="tab" href="">
       <i class="fa fa-tv"></i>
-      JPTV
+      HGTV
     </a>
     <a class="tab" href="">
       <i class="fa fa-bookmark"></i>
@@ -47,7 +47,7 @@
 
   <div class="user-images">
     <% @posts.each do |post|%>
-      <div class="wrapper">
+      <div class="trim">
         <%=link_to post_path(post) do %>
           <%=image_tag post.image %>
         <% end %>

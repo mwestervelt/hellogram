@@ -21,9 +21,31 @@
 .container{
   max-width: 1000px;
 }
+
+.center {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
 .navbar{
   border-bottom: 1px solid rgba(0,0,0,.0975);
+  .logo{
+
+
+      .text{
+        padding: 8px;
+        font-family: "Pacifico";
+        font-size: 28px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+  }
 }
+
+
 .user-section{
   a{
     padding-left: 15px;
@@ -36,7 +58,7 @@
 .search-form{
 
   input{
-    
+
     font-size: 13px;
     text-align: center;
   }
