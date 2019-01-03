@@ -20,15 +20,21 @@
 
 .container{
   max-width: 1000px;
+
+
 }
 
-.center {
-  margin: auto;
-  width: 50%;
-  text-align: center;
-}
+
 .navbar{
   border-bottom: 1px solid rgba(0,0,0,.0975);
+  .center {
+    margin-left: auto;
+    margin-right:  auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center
+  }
   .logo{
 
 
@@ -56,6 +62,8 @@
   }
 }
 .search-form{
+  margin: auto;
+
 
   input{
 

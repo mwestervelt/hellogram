@@ -3,7 +3,7 @@
 <html>
   <head>
     <%= favicon_link_tag asset_path('logo.png') %>
-    <title>hellogram</title>
+    <title>Jeroldsgram</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -16,17 +16,17 @@
       <div class="container">
         <div class="logo">
           <a class="navbar-brand" href="/">
-            <%= fa_stacked_icon "camera inverse", base: "square"%>
-              <span class="text">  Hellogram </span>
+            <%= image_tag asset_path('jerold.png'), base: "square"%>
+              <span class="text">  Jeroldsgram </span>
           </a>
         </div>
 
           <!-- SEARCH FORM -->
-        <div class="m-auto">
+        <span class="center">
             <%= form_with url: search_path, method: :get, local: true, class: 'form-inline search-form' do |form| %>
               <%= form.text_field :query, value: params[:query], class: 'form-control mr-sm-2', placeholder: '🔍 search' %>
             <% end %>
-        </div>
+        </span>
 
         <div class="user-section">
           <a><i class="fa fa-compass"></i></a>

@@ -2,6 +2,7 @@ class Post < ApplicationRecord
   after_commit :create_hashtags, on: :create
 
   belongs_to :user
+  has_many :comments , dependent: :destroy
   has_one_attached :image
 
   has_many :post_hash_tags

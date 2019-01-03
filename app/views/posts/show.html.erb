@@ -1,3 +1,22 @@
+
+<style>
+.content{
+  overflow-y: scroll;
+  max-width: 20em;
+  height: 7em;
+  padding-left: 0;
+
+
+
+  direction: inherit;
+  text-align: left;
+}
+ul{
+  padding-left: 0
+}
+</style>
+
+
 <div class="post-show row">
   <div class="col-md-8">
     <%= image_tag @post.image, class: 'image' %>
@@ -22,6 +41,27 @@
         <%end %>
       <% end %>
     </div>
+    <div class="content">
+
+   <% @post.comments.each do |comment| %>
+
+      <ul><%= link_to comment.user.username %> <%=comment.content %>
+          </ul>
+      <% end %>
+
+    </div>
+
+
+<div class= "field">
+    <h6>Add Comment</h6>
+    <%= form_for(Comment.new) do |f| %>
+      <div><%= f.hidden_field :post_id, value: @post.id %></div>
+      <div><%= f.hidden_field :user_id, value: current_user.id %></div>
+      <div><%= f.text_area :content, size: "24x3" %></div>
+      <div><%= f.submit 'Submit' %></div>
+    <% end %>
+  </div>
+
     <div class="delete">
       <% if current_user.posts.exists?(@post.id) %>
         <%= link_to 'Delete Post', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
