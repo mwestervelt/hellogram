@@ -1,3 +1,7 @@
+<!DOCTYPE html>
+<html>
+
+<body>
 <div class="user-edit-page">
   <div class="actions">
     <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
@@ -7,7 +11,7 @@
       <a class="nav-link" data-toggle="pill">Email and SMS</a>
       <a class="nav-link" data-toggle="pill">Manage Contacts</a>
       <a class="nav-link" data-toggle="pill">Privacy and Security</a>
-      <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: "nav-link" %>
+      <%= link_to 'Log Out', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' }, class: "nav-link" %>
     </div>
   </div>
   <div class="details tab-content">
@@ -45,7 +49,7 @@
         <div class="form-group row">
           <%= f.label :website, class: 'col-sm-3 col-form-label' %>
           <div class="col-sm-9">
-            <%= f.text_field :website, class: 'form-control' %>
+            <%= f.text_field :website, class: 'form-control', value: "http://" %>
           </div>
         </div>
         <div class="form-group row">
@@ -83,3 +87,5 @@
     </div>
   </div>
 </div>
+</body>
+</html>

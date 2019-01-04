@@ -14,15 +14,29 @@ div.trim {
 
 .profile .avatar{
   .wrapper{
-    width: 140px;
-    height: 140px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #888888;
     margin: 40px auto;
+    overflow: hidden;
+    display:flex;
+    align-items:center;
+     justify-content:center;
   }
   .wrapper img{
     width: 100%;
+
     border-radius: 50%;
+
+
+      border: 1px solid #efefef;
+      border-radius: 50%;
+    }
+
+
   }
-}
+
 
 .profile .basic-info{
   padding: 40px 0;

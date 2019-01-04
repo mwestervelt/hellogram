@@ -3,7 +3,7 @@
 .content{
   overflow-y: scroll;
   max-width: 20em;
-  height: 7em;
+  height: 8.5em;
   padding-left: 0;
 
 
@@ -45,7 +45,15 @@ ul{
 
    <% @post.comments.each do |comment| %>
 
-      <ul><%= link_to comment.user.username %> <%=comment.content %>
+      <ul><%= link_to comment.user.username, user_path(comment.user_id), class: 'username' %>
+        
+         <% comment.content.to_s.split(' ').each do |word| %>
+           <% if word.start_with?('#') %>
+             <%= link_to word, search_path(query: word) %>
+           <%else %>
+             <%= word %>
+           <%end %>
+         <% end %>
           </ul>
       <% end %>
 
