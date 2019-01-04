@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.content {
+  .username{
+  padding-top: 13px;
+  color: #262626;
+  font-size: 14px;
+  font-weight: 600;
+  &:hover{
+    text-decoration: none;
+  }
+}
+}
 
 div.trim {
      max-height:280px;

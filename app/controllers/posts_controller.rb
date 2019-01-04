@@ -1,5 +1,9 @@
 class PostsController < ApplicationController
 
+  def index
+  @posts = Post.find(Post.pluck(:id).sample)
+  end
+
   def create
     Post.create(post_params)
     redirect_to root_path
@@ -13,7 +17,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to user_path(current_user)
-  end 
+  end
 
 
 private

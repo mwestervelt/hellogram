@@ -19,7 +19,7 @@ before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
  def create
 
-  
+
    @comment = Comment.create(comment_params)
    redirect_to post_path(@comment.post)
  end
@@ -29,8 +29,9 @@ before_action :set_comment, only: [:show, :edit, :update, :destroy]
  end
 
  def destroy
+   @comment = Comment.find(params[:id])
    @comment.destroy
-   redirect_to root_path
+   redirect_to post_path(@comment.post)
  end
 
  private

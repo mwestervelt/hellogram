@@ -46,7 +46,8 @@ ul{
    <% @post.comments.each do |comment| %>
 
       <ul><%= link_to comment.user.username, user_path(comment.user_id), class: 'username' %>
-        
+
+
          <% comment.content.to_s.split(' ').each do |word| %>
            <% if word.start_with?('#') %>
              <%= link_to word, search_path(query: word) %>
@@ -54,6 +55,11 @@ ul{
              <%= word %>
            <%end %>
          <% end %>
+         <span class="delete">
+           <% if current_user == comment.user %>
+             <%= link_to '✖︎', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+           <% end %>
+         </span>
           </ul>
       <% end %>
 

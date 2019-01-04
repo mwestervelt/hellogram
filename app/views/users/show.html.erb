@@ -22,8 +22,12 @@
         <li><span>345</span> following</li>
       </ul>
       <h2 class="name"><%=@user.name %></h2>
-      <%=link_to @user.website, url_for(@user.website), :target => "_blank", class: 'website' %>
+      <%=link_to @user.website, url_for(@user.website), :target => "_blank", class: 'website' %><br>
+      <span> <%= @user.bio %> </span>
     </div>
+
+
+
   </div>
 
   <div class="user-tabs">
