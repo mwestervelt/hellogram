@@ -3,7 +3,6 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_one_attached :avatar
 
-
 # can login with either username or email
   # attr_accessor :login
   #
