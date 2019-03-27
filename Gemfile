@@ -6,10 +6,10 @@ ruby '2.3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 gem 'pg'
-gem 'bootstrap', '~> 4.1.1'
+gem "bootstrap", ">= 4.3.1"
 gem 'jquery-rails'
 gem 'font-awesome-rails'
-gem 'devise'
+gem "devise", ">= 4.6.0"
 gem 'kaminari'
 # Use sqlite3 as the database for Active Record
 
