@@ -1,7 +1,7 @@
 # Hellogram
 
 ## About
-Inspired by Instagram, Hellogram was a chance to get comfortable with building a fully functional social media site using Ruby on Rails. I was also able to add a local file upload from the web app, which *the real Instagram doesn't have*. 
+Inspired by Instagram, Hellogram was a chance to get comfortable with building a fully functional social media site using Ruby on Rails. I was also able to add a local file upload from the web app, which *the real Instagram doesn't have*.
 
 ## Features
 - Users can sign up or login from the homepage and have a user profile page
@@ -19,9 +19,9 @@ Inspired by Instagram, Hellogram was a chance to get comfortable with building a
 - Devise gem for authentication/authorization
 
 ## Screenshots
-![homepage](/hellogram/public/screenshots/home.png "Homepage")
-![search page](/hellogram/public/screenshots/search.png "Search")
-![one post](/hellogram/public/screenshots/one-post.png "One Photo")
+![homepage](/public/screenshots/home.png "Homepage")
+![search page](/public/screenshots/search.png "Search")
+![one post](/public/screenshots/one-post.png "One Photo")
 
 ## Installation
 ```
